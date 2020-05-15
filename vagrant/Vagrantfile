@@ -1,0 +1,45 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+BOX_IMAGE = "bento/ubuntu-18.04"
+NODE_COUNT = 1
+
+Vagrant.configure("2") do |config|
+
+  config.vm.provider "hyperv" do |v|
+    v.memory = 2048
+    v.enable_virtualization_extensions = true
+    v.linked_clone = true
+  end
+
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+
+  config.vm.provision "shell", inline: <<-SHELL
+    export DEBIAN_FRONTEND=noninteractive && \
+    apt-get -y update && apt-get -y -o Dpkg::Options::="--force-confnew" upgrade && apt-get -y autoremove && \
+    curl https://releases.rancher.com/install-docker/1.12.sh | sh
+    # apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common && \
+    #curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
+    # add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && \
+    # apt-get -y update && apt-get -y upgrade && apt-get -y install docker-ce docker-ce-cli containerd.io && \
+  SHELL
+
+  config.vm.define "master" do |subconfig|
+    subconfig.vm.box = BOX_IMAGE
+    subconfig.vm.hostname = "master"
+    # subconfig.vm.network "public_network", bridge: "Intel(R) I350 Gigabit Network Connection #3 - Virtual Switch"
+    # subconfig.vm.network :private_network, ip: "10.0.0.10"
+    subconfig.vm.provision "shell", inline: <<-SHELL
+      docker run -d --restart=unless-stopped -p 8080:8080 rancher/server:v1.6.26
+    SHELL
+  end
+
+  (1..NODE_COUNT).each do |i|
+    config.vm.define "node#{i}" do |subconfig|
+      subconfig.vm.box = BOX_IMAGE
+      subconfig.vm.hostname = "node#{i}"
+      # subconfig.vm.network :private_network, ip: "10.0.0.#{i + 10}"
+    end
+  end
+
+end

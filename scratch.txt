@@ -1,0 +1,16 @@
+
+administrator Games2cool!
+
+    apt-get -y update && apt-get -y -o Dpkg::Options::="--force-confnew" upgrade && apt-get -y autoremove && \
+
+
+
+sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.3 --server https://192.168.10.104 --token d9fdhzsxl27rwrlsx48p75m5t78bvn8n2gwkg2mx49w7bbvt4kgp4t --ca-checksum 3e32aae0119c77577c0014c0a23f4555be6f5b365ae0266e0af7fa0bc072d48b --etcd --controlplane --worker
+
+
+
+    master:  Parent PID 16695: /usr/sbin/grub-probe
+    master: File descriptor 3 (pipe:[58784]) leaked on vgs invocation.
+    master:  Parent PID 16695: /usr/sbin/grub-probe
+
+    curl https://releases.rancher.com/install-docker/1.12.sh | sh
