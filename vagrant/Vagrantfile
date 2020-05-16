@@ -1,7 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-BOX_IMAGE = "generic/debian9"
+BOX_IMAGE = "bento/ubuntu-18.04"
+# BOX_VERSION = "201803.24.0"
 NODE_COUNT = 2
 
 Vagrant.configure("2") do |config|
@@ -18,11 +19,13 @@ Vagrant.configure("2") do |config|
     export DEBIAN_FRONTEND=noninteractive && \
     apt-get -y update && apt-get -y -o Dpkg::Options::="--force-confnew" upgrade && apt-get -y autoremove && \
     apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common && \
-    curl https://releases.rancher.com/install-docker/18.09.sh | sh
+    curl https://releases.rancher.com/install-docker/18.09.sh | sh && \
+    sudo usermod -aG docker vagrant && ufw disable
   SHELL
 
   config.vm.define "master" do |subconfig|
     subconfig.vm.box = BOX_IMAGE
+    # subconfig.vm.box_version = BOX_VERSION
     subconfig.vm.hostname = "master"
     subconfig.vm.network "public_network", bridge: "Intel(R) I350 Gigabit Network Connection #3 - Virtual Switch"
     # subconfig.vm.network :private_network, ip: "10.0.0.10"
@@ -35,6 +38,7 @@ Vagrant.configure("2") do |config|
   (1..NODE_COUNT).each do |i|
     config.vm.define "node#{i}" do |subconfig|
       subconfig.vm.box = BOX_IMAGE
+      # subconfig.vm.box_version = BOX_VERSION
       subconfig.vm.hostname = "node#{i}"
       subconfig.vm.network "public_network", bridge: "Intel(R) I350 Gigabit Network Connection #3 - Virtual Switch"
       # subconfig.vm.network :private_network, ip: "10.0.0.#{i + 10}"
