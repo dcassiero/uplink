@@ -1,0 +1,10 @@
+version: '2'
+services:
+  nba:
+    image: dcassiero/em_dosbox-nba:1.0
+    stdin_open: true
+    tty: true
+    ports:
+    - 9091:8000/tcp
+    labels:
+      io.rancher.container.pull_image: always

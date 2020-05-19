@@ -1,0 +1,11 @@
+version: '2'
+services:
+  doom:
+    image: dcassiero/em_dosbox-doom:1.1
+    stdin_open: true
+    tty: true
+    ports:
+    - 9090:8000/tcp
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
