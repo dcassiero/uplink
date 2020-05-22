@@ -15,13 +15,16 @@ Use these with
 docker build --build-arg...
 ```
 
-| Game | Short Name | ARG game | ARG exe |
-| --- | --- | --- | --- |
-| Doom | doom | doom | DOOM.EXE |
-| Commander Keen 6 | keen6 | keen6 | keen.exe |
-| Lode Runner | lodetlr | lodetlr | LR.BAT |
-| MicroLeague Baseball | mlbb | mlbb | Mlbb.com |
-| Lakers versus Celtics and the NBA Playoffs | nba | nba | nba.exe |
+| Game | Short Name | ARG game | ARG exe | Genre |
+| --- | --- | --- | --- | --- |
+| Doom | doom | doom | DOOM.EXE | FPS |
+| Commander Keen 6 | keen6 | keen6 | keen.exe | Action |
+| Lode Runner | lodetlr | lodetlr | LR.BAT | Action |
+| MicroLeague Baseball | mlbb | mlbb | Mlbb.com | Sports |
+| Lakers versus Celtics and the NBA Playoffs | nba | nba | nba.exe | Sports |
+| Prince of Persia | prince | prince | PRINCE.EXE | Action |
+| SimEarth | simearth | simearth | SIMEARTH.EXE | Simulation |
+| Space Quest 1 | sq1 | sq1 | SQ.COM | Adventure |
 
 
 
