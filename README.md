@@ -12,9 +12,9 @@ git clone https://github.com/dcassiero/uplink.git
 ## Usage
 There are three componets to this project. Each component is located in its individually named repository.
 
-vagrant - the infrastructure, including; hosts, Docker, and Rancher.
-docker - The Dockerfiles for the base em_dosbox image and individual games.
-site - The main frontend that serves up a catalog of games.
+1. vagrant - the infrastructure, including; hosts, Docker, and Rancher.
+2. docker - The Dockerfiles for the base em_dosbox image and individual games.
+3. site - The main frontend that serves up a catalog of games.
 
 
 ### vagrant
