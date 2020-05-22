@@ -1,6 +1,6 @@
 # Dockerfiles
 
-This is a collection of Dockerfiles which are used for the uPLINK project. This can be simplifed, a TODO.
+This is a collection of Dockerfiles which are used for the UPLINK project. This can be simplifed, a TODO.
 
 ## Components
 
@@ -22,7 +22,6 @@ docker build --build-arg...
 | Lode Runner | lodetlr | lodetlr | LR.BAT |
 | MicroLeague Baseball | mlbb | mlbb | Mlbb.com |
 | Lakers versus Celtics and the NBA Playoffs | nba | nba | nba.exe |
-
 
 
 
