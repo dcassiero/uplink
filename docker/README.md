@@ -15,13 +15,13 @@ Use these with
 docker build --build-arg...
 ```
 
-|Game|Short Name|ARG game|ARG exe|
-|----------------||----------------||----------------||----------------|
-|Doom|doom|doom|DOOM.EXE|
-|Commander Keen 6|keen6|keen6|keen.exe|
-|Lode Runner|lodetlr|lodetlr|LR.BAT|
-|MicroLeague Baseball|mlbb|mlbb|Mlbb.com|
-|Lakers versus Celtics and the NBA Playoffs|nba|nba|nba.exe|
+| Game | Short Name | ARG game | ARG exe |
+| --- | --- | --- | --- |
+| Doom | doom | doom | DOOM.EXE |
+| Commander Keen 6 | keen6 | keen6 | keen.exe |
+| Lode Runner | lodetlr | lodetlr | LR.BAT |
+| MicroLeague Baseball | mlbb | mlbb | Mlbb.com |
+| Lakers versus Celtics and the NBA Playoffs | nba | nba | nba.exe |
 
 
 
