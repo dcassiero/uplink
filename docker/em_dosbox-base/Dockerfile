@@ -1,5 +1,7 @@
 FROM debian:buster
 
+LABEL Daniel Cassiero <daniel.cassiero@gmail.com>
+
 RUN apt-get update && apt-get install -y \
     python \
 	cmake \
