@@ -1,8 +1,9 @@
-FROM debian:buster
+FROM debian:buster-slim
 
 LABEL Daniel Cassiero <daniel.cassiero@gmail.com>
 
-RUN apt-get update && apt-get install -y \
+RUN mkdir -p /usr/share/man/man1 && \
+    apt-get update && apt-get install -y \
     python \
 	cmake \
 	default-jre \

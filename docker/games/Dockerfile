@@ -1,4 +1,4 @@
-FROM dcassiero/em_dosbox-base:1.0
+FROM dcassiero/em_dosbox-base:1.1
 
 ARG game
 ARG exe
