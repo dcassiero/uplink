@@ -25,6 +25,7 @@ docker build --build-arg...
 | Prince of Persia | prince | prince | PRINCE.EXE | Action |
 | SimEarth | simearth | simearth | SIMEARTH.EXE | Simulation |
 | Space Quest 1 | sq1 | sq1 | SQ.COM | Adventure |
+| Where In The World Is Carmen Sandiego? | carmen | carmen | CARMEN.EXE | Adventure |
 
 
 
