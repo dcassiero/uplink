@@ -3,7 +3,7 @@
 echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" | tee -a /etc/apk/repositories
 echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" | tee -a /etc/apk/repositories
 
-apk update && apk upgrade && apk add emscripten-fastcomp emscripten emscripten-optimizer emscripten-libs-asmjs emscripten-libs-wasm make autoconf autoconf-archive automake darkhttpd git glib-dev glib markdown
+apk update && apk upgrade && apk add git emscripten-fastcomp emscripten emscripten-optimizer emscripten-libs-asmjs emscripten-libs-wasm make autoconf autoconf-archive automake darkhttpd git glib-dev glib markdown
 
 
 mkdir -p /opt/apps
