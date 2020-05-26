@@ -26,6 +26,8 @@ docker build --build-arg...
 | SimEarth | simearth | simearth | SIMEARTH.EXE | Simulation |
 | Space Quest 1 | sq1 | sq1 | SQ.COM | Adventure |
 | Where In The World Is Carmen Sandiego? | carmen | carmen | CARMEN.EXE | Adventure |
+| The Oregon Trail Deluxe | oregondx | oregondx | OREGON.EXE | Simulation |
+| Ultima 6 | ultima6 | ultima6 | ULTIMA6.EXE | RPG |
 
 
 
