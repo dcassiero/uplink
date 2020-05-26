@@ -1,7 +1,7 @@
 version: '2'
 services:
   doom:
-    image: dcassiero/em_dosbox-doom:1.1
+    image: dcassiero/em_dosbox-doom:2.0
     stdin_open: true
     tty: true
     ports:
