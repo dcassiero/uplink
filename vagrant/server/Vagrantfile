@@ -28,11 +28,9 @@ Vagrant.configure("2") do |config|
     # subconfig.vm.box_version = BOX_VERSION
     subconfig.vm.hostname = "master"
     subconfig.vm.network "public_network", bridge: "Intel(R) I350 Gigabit Network Connection #3 - Virtual Switch"
-    # subconfig.vm.network :private_network, ip: "10.0.0.10"
     subconfig.vm.provision "shell", inline: <<-SHELL
       docker run -d --restart=unless-stopped -p 8080:8080 rancher/server:v1.6.26
     SHELL
-    # subconfig.vm.provision :reload
   end
 
   (1..NODE_COUNT).each do |i|
@@ -41,8 +39,6 @@ Vagrant.configure("2") do |config|
       # subconfig.vm.box_version = BOX_VERSION
       subconfig.vm.hostname = "node#{i}"
       subconfig.vm.network "public_network", bridge: "Intel(R) I350 Gigabit Network Connection #3 - Virtual Switch"
-      # subconfig.vm.network :private_network, ip: "10.0.0.#{i + 10}"
-      # subconfig.vm.provision :reload
     end
   end
 
