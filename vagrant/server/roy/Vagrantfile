@@ -8,7 +8,6 @@ NODE_COUNT = 3
 Vagrant.configure("2") do |config|
 
   config.vm.provider "hyperv" do |v|
-    v.memory = 2048
     v.enable_virtualization_extensions = true
     v.linked_clone = true
   end
@@ -25,6 +24,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "master" do |subconfig|
     subconfig.vm.box = BOX_IMAGE
+    subconfig.vm.memory = 4096
     # subconfig.vm.box_version = BOX_VERSION
     subconfig.vm.hostname = "master-roy"
     subconfig.vm.network "public_network", bridge: "Intel(R) I350 Gigabit Network Connection #3 - Virtual Switch"
@@ -36,6 +36,7 @@ Vagrant.configure("2") do |config|
   (1..NODE_COUNT).each do |i|
     config.vm.define "node#{i}" do |subconfig|
       subconfig.vm.box = BOX_IMAGE
+      subconfig.vm.memory = 2048
       # subconfig.vm.box_version = BOX_VERSION
       subconfig.vm.hostname = "node#{i}-roy"
       subconfig.vm.network "public_network", bridge: "Intel(R) I350 Gigabit Network Connection #3 - Virtual Switch"
