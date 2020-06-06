@@ -1,5 +1,5 @@
 FROM nginx:1.17.10-alpine
-MAINTAINER Daniel Cassiero <daniel.cassiero@gmail.com>
+LABEL maintainer="Daniel Cassiero <daniel.cassiero@gmail.com>"
 
 EXPOSE 80
 
