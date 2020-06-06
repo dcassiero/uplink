@@ -23,6 +23,9 @@ Contains Vagrantfiles for infra-as-code to stand up an environment.
 ### docker
 Contains Dockerfiles for the base em_dosbox image as well as for individual DOS games.
 
+## Diagram
+https://go.gliffy.com/go/html5/13289187
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
