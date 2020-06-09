@@ -9,10 +9,10 @@ This is a collection of Dockerfiles which are used for the UPLINK project. This 
 3. games - individual Dockerfiles, per game. This can probably be greatly simplfied,.
 
 ## Dockerfile ARGs
-Use these with
+Use these with: ex.
 
 ```bash
-docker build --build-arg...
+docker build --build-arg game=doom --build-arg exe=DOOM.EXE
 ```
 
 | Game | Short Name | ARG game | ARG exe | Genre |
