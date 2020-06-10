@@ -18,7 +18,7 @@ docker build --build-arg game=doom --build-arg exe=DOOM.EXE
 | Game | Short Name | ARG game | ARG exe | Genre |
 | --- | --- | --- | --- | --- |
 | Doom | doom | doom | DOOM.EXE | FPS |
-| Commander Keen 6 | keen6 | keen6 | keen.exe | Action |
+| Commander Keen 6 | keen6 | keen6 | keen6.exe | Action |
 | Lode Runner | lodetlr | lodetlr | LR.BAT | Action |
 | MicroLeague Baseball | mlbb | mlbb | Mlbb.com | Sports |
 | Lakers versus Celtics and the NBA Playoffs | nba | nba | nba.exe | Sports |
