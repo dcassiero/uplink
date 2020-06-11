@@ -1,7 +1,7 @@
 version: '2'
 services:
   keen6:
-    image: dcassiero/em_dosbox-keen6:2.0
+    image: dcassiero/em_dosbox-keen6:1.0
     stdin_open: true
     tty: true
     ports:
@@ -10,7 +10,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   simearth:
-    image: dcassiero/em_dosbox-simearth:2.0
+    image: dcassiero/em_dosbox-simearth:1.0
     stdin_open: true
     tty: true
     ports:
@@ -19,7 +19,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   sq1:
-    image: dcassiero/em_dosbox-sq1:2.0
+    image: dcassiero/em_dosbox-sq1:1.0
     stdin_open: true
     tty: true
     ports:
@@ -28,7 +28,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   doom:
-    image: dcassiero/em_dosbox-doom:2.1
+    image: dcassiero/em_dosbox-doom:1.0
     stdin_open: true
     tty: true
     ports:
@@ -46,7 +46,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   nba:
-    image: dcassiero/em_dosbox-nba:2.0
+    image: dcassiero/em_dosbox-nba:1.0
     stdin_open: true
     tty: true
     ports:
@@ -55,7 +55,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   mlbb:
-    image: dcassiero/em_dosbox-mlbb:2.0
+    image: dcassiero/em_dosbox-mlbb:1.0
     stdin_open: true
     tty: true
     ports:
@@ -64,7 +64,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   lodetlr:
-    image: dcassiero/em_dosbox-lodetlr:2.0
+    image: dcassiero/em_dosbox-lodetlr:1.0
     stdin_open: true
     tty: true
     ports:
@@ -73,7 +73,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   ultima6:
-    image: dcassiero/em_dosbox-ultima6:1.1
+    image: dcassiero/em_dosbox-ultima6:1.0
     stdin_open: true
     tty: true
     ports:
@@ -91,7 +91,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   prince:
-    image: dcassiero/em_dosbox-prince:2.0
+    image: dcassiero/em_dosbox-prince:1.0
     stdin_open: true
     tty: true
     ports:
