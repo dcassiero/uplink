@@ -9,16 +9,16 @@ This is a collection of Dockerfiles which are used for the UPLINK project. This 
 3. games - individual Dockerfiles, per game. This can probably be greatly simplfied,.
 
 ## Dockerfile ARGs
-Use these with
+Use these with: ex.
 
 ```bash
-docker build --build-arg...
+docker build --build-arg game=doom --build-arg exe=DOOM.EXE
 ```
 
 | Game | Short Name | ARG game | ARG exe | Genre |
 | --- | --- | --- | --- | --- |
 | Doom | doom | doom | DOOM.EXE | FPS |
-| Commander Keen 6 | keen6 | keen6 | keen.exe | Action |
+| Commander Keen 6 | keen6 | keen6 | keen6.exe | Action |
 | Lode Runner | lodetlr | lodetlr | LR.BAT | Action |
 | MicroLeague Baseball | mlbb | mlbb | Mlbb.com | Sports |
 | Lakers versus Celtics and the NBA Playoffs | nba | nba | nba.exe | Sports |
