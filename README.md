@@ -16,16 +16,18 @@ There are three componets to this project. Each component is located in its indi
 2. docker - The Dockerfiles for the base em_dosbox image and individual games.
 3. site - The main frontend that serves up a catalog of games.
 
+### docker
+Contains Dockerfiles for the base em_dosbox image as well as for individual DOS games.
+
+### site
+Contains the code for the frontend site as well as the reverse proxy.
 
 ### vagrant
 Contains Vagrantfiles for infra-as-code to stand up an environment.
 
-### docker
-Contains Dockerfiles for the base em_dosbox image as well as for individual DOS games.
-
 ## Diagram
+(a general idea, subject to change)
 https://go.gliffy.com/go/html5/13289187
-
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
