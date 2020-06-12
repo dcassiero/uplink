@@ -1,0 +1,10 @@
+version: '2'
+services:
+  proxy:
+    image: dcassiero/nginx-proxy:1.0
+    stdin_open: true
+    tty: true
+    ports:
+    - 80:80/tcp
+    labels:
+      io.rancher.container.pull_image: always

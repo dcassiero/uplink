@@ -1,0 +1,10 @@
+version: '2'
+services:
+  frontend:
+    image: dcassiero/freeplay_fe:1.0
+    stdin_open: true
+    tty: true
+    ports:
+    - 8888:80/tcp
+    labels:
+      io.rancher.container.pull_image: always
