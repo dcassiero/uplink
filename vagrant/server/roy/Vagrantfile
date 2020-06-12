@@ -47,17 +47,4 @@ Vagrant.configure("2") do |config|
     end
   end
 
-  config.vm.define "monitor" do |subconfig|
-    subconfig.vm.box = BOX_IMAGE
-    # subconfig.vm.box_version = BOX_VERSION
-    subconfig.vm.provider "hyperv" do |hv|
-      hv.memory = 4096
-    end
-    subconfig.vm.hostname = "monitor"
-    subconfig.vm.network "public_network", bridge: "Intel(R) I350 Gigabit Network Connection #3 - Virtual Switch"
-    # subconfig.vm.provision "shell", inline: <<-SHELL
-    #   docker run -d --restart=unless-stopped -p 8080:8080 rancher/server:v1.6.26
-    # SHELL
-  end
-
 end
