@@ -1321,10 +1321,12 @@
 			#header.hide .button.big, #header.preview .button.big {
 				display: none;
 			}
-
+/*
+    Had to modify padding-top so home appeared. was 1.5em
+*/
 			#header.hide .button.hidden, #header.preview .button.hidden {
 				text-decoration: none;
-				padding-top: 1.5em;
+				padding-top: 0;
 				padding-left: 0;
 				padding-right: 0;
 				background: none;
