@@ -1,4 +1,5 @@
 FROM debian:buster-slim
+LABEL maintainer="Daniel Cassiero <daniel.cassiero@gmail.com>"
 
 LABEL Daniel Cassiero <daniel.cassiero@gmail.com>
 
