@@ -4,5 +4,5 @@ exe=(ALIEN.EXE ARK.COM BRAIN.EXE CARMEN.EXE CEGA.EXE DOOM.EXE DUNE.BAT keen6.exe
 
 for (( g=0,e=0; g<${#game[@]},e<${#exe[@]}; g++,e++))
 do
-  echo "game=${game[$g]} exe=${exe[$e]}"
+  docker build --no-cache --build-arg game=${game[$g]} --build-arg exe=${exe[$e]} -t dcassiero/em_dosbox-${game[$g]}:1.0 . && docker push dcassiero/em_dosbox-${game[$g]}:1.0
 done
