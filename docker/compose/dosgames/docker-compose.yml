@@ -136,3 +136,11 @@ services:
       io.rancher.scheduler.affinity:host_label: dosgames=true
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
+  brain:
+    image: dcassiero/em_dosbox-brain:1.0
+    ports:
+    - 9107:8000/tcp
+    labels:
+      io.rancher.scheduler.affinity:host_label: dosgames=true
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
