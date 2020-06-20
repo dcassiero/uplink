@@ -160,3 +160,11 @@ services:
       io.rancher.scheduler.affinity:host_label: dosgames=true
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
+  bchess:
+    image: dcassiero/em_dosbox-bchess:1.0
+    ports:
+    - 9110:8000/tcp
+    labels:
+      io.rancher.scheduler.affinity:host_label: dosgames=true
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
