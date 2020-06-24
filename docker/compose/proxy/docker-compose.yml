@@ -1,7 +1,7 @@
 version: '2'
 services:
   proxy:
-    image: dcassiero/nginx-proxy:1.0
+    image: dcassiero/nginx-proxy:1.2
     stdin_open: true
     tty: true
     ports:
