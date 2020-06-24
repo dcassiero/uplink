@@ -1,21 +1,5 @@
 version: '2'
 services:
-  keen6:
-    image: dcassiero/em_dosbox-keen6:1.0
-    ports:
-    - 9100:8000/tcp
-    labels:
-      io.rancher.scheduler.affinity:host_label: dosgames=true
-      io.rancher.container.pull_image: always
-      io.rancher.scheduler.global: 'true'
-  simearth:
-    image: dcassiero/em_dosbox-simearth:1.0
-    ports:
-    - 9095:8000/tcp
-    labels:
-      io.rancher.scheduler.affinity:host_label: dosgames=true
-      io.rancher.container.pull_image: always
-      io.rancher.scheduler.global: 'true'
   sq1:
     image: dcassiero/em_dosbox-sq1:1.0
     ports:
@@ -104,22 +88,6 @@ services:
       io.rancher.scheduler.affinity:host_label: dosgames=true
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
-  ark2:
-    image: dcassiero/em_dosbox-ark2:1.0
-    ports:
-    - 9103:8000/tcp
-    labels:
-      io.rancher.scheduler.affinity:host_label: dosgames=true
-      io.rancher.container.pull_image: always
-      io.rancher.scheduler.global: 'true'
-  td3:
-    image: dcassiero/em_dosbox-td3:1.0
-    ports:
-    - 9104:8000/tcp
-    labels:
-      io.rancher.scheduler.affinity:host_label: dosgames=true
-      io.rancher.container.pull_image: always
-      io.rancher.scheduler.global: 'true'
   alien:
     image: dcassiero/em_dosbox-alien:1.0
     ports:
@@ -144,26 +112,10 @@ services:
       io.rancher.scheduler.affinity:host_label: dosgames=true
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
-  vette:
-    image: dcassiero/em_dosbox-vette:1.0
-    ports:
-    - 9108:8000/tcp
-    labels:
-      io.rancher.scheduler.affinity:host_label: dosgames=true
-      io.rancher.container.pull_image: always
-      io.rancher.scheduler.global: 'true'
   ys:
     image: dcassiero/em_dosbox-ys:1.0
     ports:
     - 9109:8000/tcp
-    labels:
-      io.rancher.scheduler.affinity:host_label: dosgames=true
-      io.rancher.container.pull_image: always
-      io.rancher.scheduler.global: 'true'
-  bchess:
-    image: dcassiero/em_dosbox-bchess:1.0
-    ports:
-    - 9110:8000/tcp
     labels:
       io.rancher.scheduler.affinity:host_label: dosgames=true
       io.rancher.container.pull_image: always
