@@ -1,4 +1,4 @@
-FROM dcassiero/em_dosbox-base:1.0
+FROM dcassiero/em_dosbox-base:uplink-v1.0
 LABEL maintainer="Daniel Cassiero <daniel.cassiero@gmail.com>"
 
 ARG game

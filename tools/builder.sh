@@ -7,6 +7,6 @@ docker rmi -f $(docker images -q)
 for (( g=0,e=0; g<${#game[@]},e<${#exe[@]}; g++,e++))
 do
   echo "Starting: game=${game[$g]} exe=${exe[$e]}"
-  docker build --quiet --no-cache --build-arg game=${game[$g]} --build-arg exe=${exe[$e]} -t dcassiero/em_dosbox-${game[$g]}:1.0 . && docker push dcassiero/em_dosbox-${game[$g]}:1.0
+  docker build --quiet --no-cache --build-arg game=${game[$g]} --build-arg exe=${exe[$e]} -t dcassiero/em_dosbox-${game[$g]}:uplink-v1.0 . && docker push dcassiero/em_dosbox-${game[$g]}:uplink-v1.0
   echo "Finished: game=${game[$g]} exe=${exe[$e]}"
 done

@@ -1,18 +1,7 @@
 version: '2'
 services:
-  proxy:
-    image: dcassiero/nginx-proxy:1.2
-    stdin_open: true
-    tty: true
-    ports:
-    - 80:80/tcp
-    - 443:443/tcp
-    labels:
-      io.rancher.scheduler.affinity:host_label: proxy=true
-      io.rancher.container.pull_image: always
-      io.rancher.scheduler.global: 'true'
   frontend:
-    image: dcassiero/freeplay_fe:1.0
+    image: dcassiero/freeplay_fe:uplink-v1.0
     stdin_open: true
     tty: true
     ports:
@@ -22,7 +11,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   sq1:
-    image: dcassiero/em_dosbox-sq1:1.0
+    image: dcassiero/em_dosbox-sq1:uplink-v1.0
     ports:
     - 9094:8000/tcp
     labels:
@@ -30,7 +19,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   doom:
-    image: dcassiero/em_dosbox-doom:1.0
+    image: dcassiero/em_dosbox-doom:uplink-v1.0
     ports:
     - 9090:8000/tcp
     labels:
@@ -38,7 +27,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   oregon:
-    image: dcassiero/em_dosbox-oregondx:1.0
+    image: dcassiero/em_dosbox-oregondx:uplink-v1.0
     ports:
     - 9092:8000/tcp
     labels:
@@ -46,7 +35,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   nba:
-    image: dcassiero/em_dosbox-nba:1.0
+    image: dcassiero/em_dosbox-nba:uplink-v1.0
     ports:
     - 9097:8000/tcp
     labels:
@@ -54,7 +43,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   mlbb:
-    image: dcassiero/em_dosbox-mlbb:1.0
+    image: dcassiero/em_dosbox-mlbb:uplink-v1.0
     ports:
     - 9098:8000/tcp
     labels:
@@ -62,7 +51,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   lodetlr:
-    image: dcassiero/em_dosbox-lodetlr:1.0
+    image: dcassiero/em_dosbox-lodetlr:uplink-v1.0
     ports:
     - 9099:8000/tcp
     labels:
@@ -70,7 +59,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   ultima6:
-    image: dcassiero/em_dosbox-ultima6:1.0
+    image: dcassiero/em_dosbox-ultima6:uplink-v1.0
     ports:
     - 9091:8000/tcp
     labels:
@@ -78,7 +67,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   carmen:
-    image: dcassiero/em_dosbox-carmen:1.0
+    image: dcassiero/em_dosbox-carmen:uplink-v1.0
     ports:
     - 9093:8000/tcp
     labels:
@@ -86,7 +75,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   prince:
-    image: dcassiero/em_dosbox-prince:1.0
+    image: dcassiero/em_dosbox-prince:uplink-v1.0
     ports:
     - 9096:8000/tcp
     labels:
@@ -94,7 +83,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   sgate:
-    image: dcassiero/em_dosbox-sgate:1.0
+    image: dcassiero/em_dosbox-sgate:uplink-v1.0
     ports:
     - 9101:8000/tcp
     labels:
@@ -102,7 +91,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   dune:
-    image: dcassiero/em_dosbox-dune:1.0
+    image: dcassiero/em_dosbox-dune:uplink-v1.0
     ports:
     - 9102:8000/tcp
     labels:
@@ -110,7 +99,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   alien:
-    image: dcassiero/em_dosbox-alien:1.0
+    image: dcassiero/em_dosbox-alien:uplink-v1.0
     ports:
     - 9105:8000/tcp
     labels:
@@ -118,7 +107,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   cvania:
-    image: dcassiero/em_dosbox-cvania:1.0
+    image: dcassiero/em_dosbox-cvania:uplink-v1.0
     ports:
     - 9106:8000/tcp
     labels:
@@ -126,7 +115,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   brain:
-    image: dcassiero/em_dosbox-brain:1.0
+    image: dcassiero/em_dosbox-brain:uplink-v1.0
     ports:
     - 9107:8000/tcp
     labels:
@@ -134,7 +123,7 @@ services:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
   ys:
-    image: dcassiero/em_dosbox-ys:1.0
+    image: dcassiero/em_dosbox-ys:uplink-v1.0
     ports:
     - 9109:8000/tcp
     labels:
