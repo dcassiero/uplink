@@ -1,5 +1,5 @@
 #!/bin/bash
-game=(alien brain carmen cvania doom dune lodetlr mlbb nba oregondx prince sgate simearth sq1 ultima6 ys) 
+game=(alien brain carmen cvania doom dune lodetlr mlbb nba oregondx prince sgate sq1 ultima6 ys) 
 exe=(ALIEN.EXE BRAIN.EXE CARMEN.EXE CEGA.EXE DOOM.EXE DUNE.BAT LR.BAT Mlbb.com nba.exe OREGON.EXE PRINCE.EXE SGATE.EXE SQ.COM ULTIMA6.EXE ys.exe)
 
 docker rmi -f $(docker images -q)
