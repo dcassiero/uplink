@@ -122,6 +122,14 @@ services:
       io.rancher.scheduler.affinity:host_label: dosgames=true
       io.rancher.container.pull_image: always
       io.rancher.scheduler.global: 'true'
+  isaac:
+    image: dcassiero/em_dosbox-isaac:uplink-v1.0
+    ports:
+    - 9108:8000/tcp
+    labels:
+      io.rancher.scheduler.affinity:host_label: dosgames=true
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
   ys:
     image: dcassiero/em_dosbox-ys:uplink-v1.0
     ports:
