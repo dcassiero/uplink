@@ -1,7 +1,7 @@
 version: '2'
 services:
   frontend:
-    image: dcassiero/freeplay_fe:uplink-v1.0
+    image: dcassiero/em-dosbox-frontend:liretro-v1.0
     stdin_open: true
     tty: true
     ports:
@@ -150,6 +150,14 @@ services:
     image: dcassiero/em_dosbox-dinoadv:uplink-v1.0
     ports:
     - 9111:8000/tcp
+    labels:
+      io.rancher.scheduler.affinity:host_label: dosgames=true
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
+  warcraft:
+    image: dcassiero/em-dosbox-warcraft:liretro-v1.0
+    ports:
+    - 9112:8000/tcp
     labels:
       io.rancher.scheduler.affinity:host_label: dosgames=true
       io.rancher.container.pull_image: always
